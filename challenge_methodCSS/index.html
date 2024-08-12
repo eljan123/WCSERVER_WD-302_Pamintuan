@@ -1,0 +1,41 @@
+<!-- Pamintuan, Eljan Joel Y. | WD - 302 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Challenge_Method</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Please fill out the information below</h2>
+    <form action='http://127.0.0.1:8081/process_post' method='post'>
+        First Name: <input type="text" name="first_name"> <br>
+        Last Name: <input type="text" name="last_name"> <br>
+        ID number: <input type="text" name="id_number"> <br>
+        City: <input type="text" name="city"> <br>
+        Province: <input type="text" name="province"> <br>
+        Postal Code: <input type="text" name="postal_code"> <br>
+        <br>
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+
+        <p>Please select a subject:</p>
+        <input type="radio" id="Javascript" name="subject" value="Javascript">
+        <label for="Javascript">Javascript</label><br>
+        <input type="radio" id="TypeScript" name="subject" value="TypeScript">
+        <label for="TypeScript">TypeScript</label><br><br>
+
+        <br>
+        <p>What are your concerns?</p>
+        <br>
+        <textarea name="concerns" rows="4" cols="50"></textarea> <br><br>
+
+        <input type="submit" value="Submit">
+    </form>  
+</body>
+<footer>
+    <p>Created By: Pamintuan, Eljan Joel Y. | WD - 302 | &copy; Copyright 2024</p>
+</footer>
+</html>
