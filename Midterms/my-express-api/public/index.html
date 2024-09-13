@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User API</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <section>
+        <h1>User API</h1>
+        <p>Created by: Eljan Joel Y. Pamintuan</p>
+    </section>
+    
+    <section>
+        <div class="container">
+            <section id="view-users">
+                <h2>View All Users</h2>
+                <button onclick="fetchUsers()">Fetch Users</button>
+                <div id="user-list"></div>
+            </section>
+    
+            <section id="view-user">
+                <h2>View User by ID</h2>
+                <input type="number" id="userId" placeholder="Enter User ID">
+                <button onclick="fetchUserById()">Fetch User</button>
+                <div id="user-details"></div>
+            </section>
+    
+            <section id="add-user">
+                <h2>Add New User</h2>
+                <form id="addUserForm">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="number" id="age" placeholder="Age" required>
+                    <input type="number" id="salary" placeholder="Salary" required>
+                    <button type="submit">Add User</button>
+                </form>
+            </section>
+    
+            <section id="delete-user">
+                <h2>Delete User by ID</h2>
+                <input type="number" id="deleteId" placeholder="Enter User ID">
+                <button onclick="deleteUser()">Delete User</button>
+            </section>
+        </div>
+    </section>
+    
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
