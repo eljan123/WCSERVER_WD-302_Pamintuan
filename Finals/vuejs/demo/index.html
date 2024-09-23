@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Vue JS Demo Application</title>
+    <link rel="stylesheet" href="./scss/style.css">
+</head>
+<body>
+    <section>
+        <!-- Create a div tag with "app" ID -->
+        <div id="app">
+            <h1>Template for Vue Activity</h1>
+            <h3>Pamintuan, Eljan Joel Y. | WD - 302<h3>
+            <!-- Whatever you insert here is controlled by Vue -->
+            <p>{{ title }} - {{ author }} - {{ age }}</p>
+
+            <button v-on:click="age++">Get Older</button>
+            <button v-on:click="age--">Get Younger</button>
+            <button @click="title = 'The title has changed.'">Change Title</button>
+        </div>
+        <!-- This won't be controlled by Vue 
+        {{ age }}
+        -->
+
+
+        <!-- Two-way data binding -->
+        <div id="two-way-binding">
+            <p>{{ message }}</p>
+            <input v-model="message" />
+        </div>
+
+        <!-- using v-if -->
+        <div id="conditional-rendering">
+            <span v-if="seen">Now you see me</span>
+        </div>
+
+        <!-- This is hooked up to a method in the books.js -->
+        <div id="books">
+            <div v-if="showBooks">
+                <p>{{ btitle }} - {{ bauthor }} - {{ year }}</p>
+            </div>
+
+            <button @click="toggleShowBooks">
+                <span v-if="showBooks">Hide Books</span>
+                <span v-else>Show Books</span>
+            </button>
+        </div>
+
+        <!-- using v-for directive -->
+        <div id="list-rendering">
+           <div v-if="showList">
+                <ol>
+                    <li v-for="todo in todos" :key="todo.text">
+                        {{ todo.text }}
+                    </li>
+                </ol>
+           </div>
+
+            <button @click="toggleShowList">
+                <span v-if="showList">Hide List</span>
+                <span v-else>Show List</span>
+            </button>
+        </div>
+    </section>
+
+
+    
+<!---------------SCRIPTS--------------->
+
+<!-- Insert the below code to link to app.js -->
+<script src="./script/app.js"></script>
+<!-- Link to twoway.js -->
+<script src="./script/twoway.js"></script>
+<!-- Link to conditionalif.js -->
+<script src="./script/conditionalif.js"></script>
+<!-- Link to books.js -->
+<script src="./script/books.js"></script>
+<!-- Link to listfor.js -->
+<script src="./script/listfor.js"></script>
+</body>
+</html>
